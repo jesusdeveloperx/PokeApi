@@ -16,9 +16,10 @@ types$$ = types$$.join('');
 
 
     const div$$ = document.createElement('div');
+    
     div$$.classList.add('pokemon');
     div$$.innerHTML = `
-    <div id="todos"  style= 'display: flex; flex-row: row;'>
+    <div id="todos"  >
         <div class="pokemon-todos" id="lista-pokemon">
             <div class="pokemon">
                 <p class="pokemon-id-back">${data.id}</p>
@@ -43,4 +44,15 @@ types$$ = types$$.join('');
 `;
 listPokemon.appendChild(div$$)
 }
+
+//const buscador$$ = document.querySelector('.btn');
+//console.log(buscador$$)
+//fetch(URL)
+//.then(response => response.json())
+//.then(data => show(data));
+
+
+
+
+
 
