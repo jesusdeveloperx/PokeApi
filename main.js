@@ -45,14 +45,35 @@ types$$ = types$$.join('');
 listPokemon.appendChild(div$$)
 }
 
-//const buscador$$ = document.querySelector('.btn');
-//console.log(buscador$$)
-//fetch(URL)
-//.then(response => response.json())
-//.then(data => show(data));
+const searchInput = document.querySelector('input');
+const resultsDiv = document.getElementById('results');
 
+// Agregar un evento de entrada al campo de búsqueda
+searchInput.addEventListener('input', function() {
+  const searchTerm = searchInput.value.toLowerCase();
 
+  // Realizar una solicitud Fetch a la API de Pokémon
+  
+  fetch
+fetch('https://pokeapi.co/api/v2/pokemon')
+    .then(response => response.json())
+    .then(data => {
+      // Filtrar los resultados por nombre
+      const filteredResults = data.filter(pokemon => pokemon.name.includes(searchTerm));
 
+      
 
+     
+// Limpiar los resultados anteriores
+      resultsDiv.innerHTML = '';
 
-
+      // Mostrar los nombres de los Pokémon filtrados
+      filteredResults.
+     
+forEach(pokemon => {
+        const resultItem = document.createElement('div');
+        resultItem.textContent = pokemon.name;
+        resultsDiv.
+        results
+appendChild(resultItem);
+})})})
